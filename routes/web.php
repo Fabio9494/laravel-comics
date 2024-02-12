@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::view('/characters', 'characters')->name('characters');
-Route::view('/comics', 'comics')->name('comics');
+Route::view('/comic', 'comic')->name('comic');
 Route::view('/movies', 'movies')->name('movies');
 Route::view('/tv', 'tv')->name('tv');
 Route::view('/videos', 'videos')->name('videos');
@@ -26,3 +26,5 @@ Route::view('/games', 'games')->name('games');
 Route::view('/fans', 'fans')->name('fans');
 Route::view('/news', 'news')->name('news');
 Route::view('/shop', 'shop')->name('shop');
+
+Route::view('/comics', 'comics')->name('comics');

@@ -6,6 +6,50 @@
     box-sizing: border-box;
 }
 
+.jumbotron {
+    background-image: url(/resources/img/jumbotron.jpg);
+    height: 400px;
+    position: relative;
+}
+
+.current-series {
+    position: absolute;
+    left: 100px;
+    bottom: 160px;
+    background-color: rgb(63, 63, 255);
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.container-main {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-fumetti {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: center;
+    padding: 20px;
+    padding-top: 40px;
+
+}
+
+.card-fumetto {
+    width: calc(100% / 6 - 20px);
+    color: white;
+    padding: 10px;
+
+    img {
+        width: 80%;
+        height: 200px;
+    }
+}
+
 footer {
     background-image: url(/resources/img/footer-bg.jpg);
     display: flex;
