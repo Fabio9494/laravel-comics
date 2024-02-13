@@ -12,8 +12,10 @@
             <div class="container-fumetti">
                 @foreach ($comics as $comic)
                     <div class="card-fumetto text-center">
-                        <img src="{{ $comic['thumb'] }}" alt="">
-                        <h4 class="fs-6 p-2">{{ $comic['title'] }}</h4>
+                        <a href="{{ route('comicDetails', ['param' => $comic['id']]) }}">
+                            <img src="{{ $comic['thumb'] }}" alt="">
+                            <h4 class="fs-6 p-2">{{ $comic['title'] }}</h4>
+                        </a>
                     </div>
                 @endforeach
             </div>

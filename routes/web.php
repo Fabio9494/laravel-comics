@@ -14,11 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+    return view('comics');
+})->name('comics');
 
 Route::view('/characters', 'characters')->name('characters');
-Route::view('/comic', 'comic')->name('comic');
 Route::view('/movies', 'movies')->name('movies');
 Route::view('/tv', 'tv')->name('tv');
 Route::view('/videos', 'videos')->name('videos');
@@ -27,4 +26,15 @@ Route::view('/fans', 'fans')->name('fans');
 Route::view('/news', 'news')->name('news');
 Route::view('/shop', 'shop')->name('shop');
 
-Route::view('/comics', 'comics')->name('comics');
+
+Route::get('/comics/{param}', function ($id) {
+    $comics = config('comics');
+    
+    foreach($comics as $item){
+        if($item['id'] == $id){
+            $comic = $item;
+        }
+    }
+
+    return view('comicDetails', compact('comic'));
+})->name('comicDetails');
